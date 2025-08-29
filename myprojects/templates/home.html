@@ -1,16 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>home</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <p>home <a href ="/about">click</a></p>
+  <!-- Navigation Bar -->
+  <header class="hero1">
+    <nav>
+        <div class="logo"></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2><span> Hello, I'm Yuthila Banuka</span></h2>
+    <p>A passionate Web Developer & AI enthusiast </p>
+    <button onclick="scrollToSection('projects')">View My Work</button>
+  </section>
+
+<!-- about section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <h2>About Me</h2>
+    <ul>
+      <li>
+        <strong>Undergraduate at University of Sabaragamuwa | IS (Information Systems)</strong>
+        <p>I completed my Advanced Level examinations in the Mathematics stream, achieving three C grades.
+            Following this, I secured admission to the University of Sabaragamuwa, where I am currently pursuing a Bachelor of Science (Honours) degree in Information Systems.
+            During my studies, I have been developing my skills in areas such as programming, web development, and AI automation, which have helped me build a strong foundation for a career in IT</p>
+      </li>
+      <li>
+        <strong>Worked at SriLankan Airlines</strong>
+        <p>I worked at SriLankan Airlines for seven months, where I gained valuable experience in a fast paced, customer focused environment.
+            During my time there, I developed strong communication, teamwork,
+            and problem solving skills, which have helped me build a solid foundation for both professional and personal growth."</p>
+      </li>
+      <li>
+        <strong>Student of Kingswood College Kandy</strong>
+        <p>I completed my Ordinary Level (O/L) and Advanced Level (A/L) studies at Kingswood College, Kandy.
+            During my time there, I built a strong academic foundation while also developing discipline,
+            critical thinking,
+            and a passion for learning that continues to drive me in my higher education and career pursuits.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+<section id="projects" class="projects-section">
+<h2> Projects </h2><br>
+    <div class="projects-container">
+
+
+    <!-- Matrix Calculator -->
+    <div class="project-card">
+      <h3>Matrix Calculator (Python & Matplotlib)</h3>
+      <p>Built an interactive command-line tool using NumPy and Matplotlib to understand linear regression concepts visually.</p>
+      <a href="https://github.com/Banuka2540/Matrix_Calculator" target="_blank" class="btn">GitHub</a>
+    </div>
+
+    <!-- Task Manager -->
+    <div class="project-card">
+      <h3>CRUD Task Manager (Django)</h3>
+      <p>Developed a Django-based web application to create, read, update, and delete tasks for learning Django CRUD operations.</p>
+      <a href="https://github.com/Banuka2540/tasksmanager" target="_blank" class="btn">GitHub</a>
+    </div>
+
+      <div class="project-card">
+  <h3>Portfolio Website (Django, HTML, CSS & JS)</h3>
+  <p>I created this portfolio website using Django, HTML, CSS, and JavaScript to showcase my projects, skills, and experience.</p>
+  <a href="https://github.com/Banuka2540/Django-portfolio" target="_blank" class="btn">GitHub</a>
+</div>
+
+
+
+  </div>
+</section>
+
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+
+  </section>
+<script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Blogs Section -->
+  <section id="Blog" class="blogs">
+    <h2>Blogs</h2>
+    <p>sds</p>
+  </section>
+<script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: banukadeseram12@gmail.com</p>
+      <a href="https://www.instagram.com/_y_banuka_/" > <img src="#"></a>
+
+  </section>
+
+
 </body>
 </html>
-
