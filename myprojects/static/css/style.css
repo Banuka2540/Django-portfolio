@@ -54,14 +54,14 @@ nav {
 }
 
 .hero h2 span {
-  color: #ffd700;
+  color: #4da3e8;
     font-size: 200%;
 }
 
 .hero button {
   padding: 10px 20px;
   background: #fff;
-  color: #333;
+  color: #1a1a1a;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -224,4 +224,60 @@ body.dark-mode .project-card .btn {
 
 body.dark-mode .project-card .btn:hover {
   background: #4693e0;
+}
+#skills {
+  width: 80%;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skills-column {
+  flex: 1;
+}
+
+.skills-column h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.skill {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.skill p {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.progress {
+  background: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 20px;
+  background: linear-gradient(90deg, #2f4be8, #ce22ec);
+  border-radius: 20px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+
+}
+.progress-bar {
+  width: auto; /* we’ll set width via inline style in HTML */
+}
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: inherit; }
 }

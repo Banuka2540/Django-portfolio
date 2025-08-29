@@ -24,7 +24,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2><span> Hello, I'm Yuthila Banuka</span></h2>
+    <h2><span id="heading"> Hello, I'm Yuthila Banuka</span></h2>
     <p>A passionate Web Developer & AI enthusiast </p>
     <button onclick="scrollToSection('projects')">View My Work</button>
   </section>
@@ -38,13 +38,13 @@
         <strong>Undergraduate at University of Sabaragamuwa | IS (Information Systems)</strong>
         <p>I completed my Advanced Level examinations in the Mathematics stream, achieving three C grades.
             Following this, I secured admission to the University of Sabaragamuwa, where I am currently pursuing a Bachelor of Science (Honours) degree in Information Systems.
-            During my studies, I have been developing my skills in areas such as programming, web development, and AI automation, which have helped me build a strong foundation for a career in IT</p>
+            During my studies, I have been developing my skills in areas such as programming, web development, and AI automation, which have helped me build a strong foundation for a career in IT.</p>
       </li>
       <li>
         <strong>Worked at SriLankan Airlines</strong>
         <p>I worked at SriLankan Airlines for seven months, where I gained valuable experience in a fast paced, customer focused environment.
             During my time there, I developed strong communication, teamwork,
-            and problem solving skills, which have helped me build a solid foundation for both professional and personal growth."</p>
+            and problem solving skills, which have helped me build a solid foundation for both professional and personal growth.</p>
       </li>
       <li>
         <strong>Student of Kingswood College Kandy</strong>
@@ -92,10 +92,78 @@
 
 
   <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
+  <section id="skills">
+  <h2>My Skills</h2>
 
-  </section>
+  <div class="skills-container">
+    <!-- Left Column: Programming Languages -->
+    <div class="skills-column">
+      <h3>Programming Languages</h3>
+
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>Python</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>Java</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Libraries & Frameworks -->
+    <div class="skills-column">
+      <h3>Libraries & Frameworks</h3>
+
+      <div class="skill">
+        <p>Django</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>Matplotlib</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>Pandas</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 45%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p>NumPy</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 60%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script src="{% static 'js/main.js' %}"></script>
 
   <!-- Blogs Section -->
@@ -109,7 +177,7 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: banukadeseram12@gmail.com</p>
-      <a href="https://www.instagram.com/_y_banuka_/" > <img src="#"></a>
+      <a href="https://www.instagram.com/_y_banuka_/" > <img src="/images/icons8-instagram-50.png"></a>
 
   </section>
 
