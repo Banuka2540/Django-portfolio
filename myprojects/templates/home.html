@@ -1,193 +1,227 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Portfolio</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom style overrides for smooth scrolling and visual effects -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('https://placehold.co/1920x1080/4F46E5/FFFFFF?text=Abstract+Background') no-repeat center center fixed;
+            background-size: cover;
+            @apply text-gray-800 transition-colors duration-300;
+        }
+        .dark body {
+            background: url('https://placehold.co/1920x1080/111827/FFFFFF?text=Abstract+Background') no-repeat center center fixed;
+            background-size: cover;
+            @apply text-gray-200;
+        }
 
+        /* Frosted Glass Effect for content sections and nav bar */
+        .frosted-glass {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .dark .frosted-glass {
+            background-color: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Hero Section's custom text styling with shadow */
+        .hero-title-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* For the typing effect cursor */
+        .typing-text::after {
+            content: '|';
+            animation: blink-caret 0.75s step-end infinite;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: currentColor; }
+        }
+    </style>
+</head>
 <body>
 
-<!-- Navigation Bar -->
-  <header class="hero1">
-    <nav>
-      <div></div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#blogs">Blogs</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Main container -->
+    <div class="relative min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="sticky top-0 z-50 frosted-glass p-4 shadow-sm">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#hero" class="text-xl font-bold text-gray-800 dark:text-white">Jane Doe</a>
+                <div class="space-x-4 flex items-center">
+                    <a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    <!-- Dark/Light Mode Toggle Button -->
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-300 focus:outline-none">
+                        <svg id="sun-icon" class="h-5 w-5 text-gray-800 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg id="moon-icon" class="h-5 w-5 text-white hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-      <h2> <span id="span">Hello, I'm Yuthila Banuka</span></h2>
-    <p>A passionate Web Developer & AI enthusiast </p>
-    <button onclick="scrollToSection('projects')">View My Work</button>
-  </section>
+        <!-- Main content sections -->
+        <main class="container mx-auto px-4 py-8 md:py-16">
 
-<!-- about section -->
-<section id="about" class="about-section">
-  <div class="about-container">
-    <h2>About Me</h2>
-    <ul>
-      <li>
-        <strong>Undergraduate at University of Sabaragamuwa | IS (Information Systems)</strong>
-        <p>I completed my Advanced Level examinations in the Mathematics stream, achieving three C grades.
-            Following this, I secured admission to the University of Sabaragamuwa, where I am currently pursuing a Bachelor of Science (Honours) degree in Information Systems.
-            During my studies, I have been developing my skills in areas such as programming, web development, and AI automation, which have helped me build a strong foundation for a career in IT.</p>
-      </li>
-      <li>
-        <strong>Worked at SriLankan Airlines</strong>
-        <p>I worked at SriLankan Airlines for seven months, where I gained valuable experience in a fast paced, customer focused environment.
-            During my time there, I developed strong communication, teamwork,
-            and problem solving skills, which have helped me build a solid foundation for both professional and personal growth.</p>
-      </li>
-      <li>
-        <strong>Student of Kingswood College Kandy</strong>
-        <p>I completed my Ordinary Level (O/L) and Advanced Level (A/L) studies at Kingswood College, Kandy.
-            During my time there, I built a strong academic foundation while also developing discipline,
-            critical thinking,
-            and a passion for learning that continues to drive me in my higher education and career pursuits.</p>
-      </li>
-    </ul>
-  </div>
-</section>
+            <!-- Hero Section -->
+            <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 lg:w-2/3">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 dark:text-white mb-4 hero-title-shadow">
+                        Hello, I'm <span class="text-indigo-600 dark:text-indigo-400">Jane Doe</span>.
+                    </h1>
+                    <p id="typed-text" class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-6 typing-text">
 
+                    </p>
+                    <a href="#projects" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-transform transform hover:scale-105">
+                        View My Work
+                    </a>
+                </div>
+                <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-indigo-400 shadow-xl">
+                    <img src="https://placehold.co/500x500/818CF8/E0E7FF?text=Jane+Doe" alt="Jane Doe Profile Picture" class="object-cover w-full h-full">
+                </div>
+            </section>
 
-  <!-- Projects Section -->
-<section id="projects" class="projects-section">
-<h2> Projects </h2><br>
-    <div class="projects-container">
+            <!-- About Section -->
+            <section id="about" class="py-16 md:py-24 frosted-glass rounded-2xl shadow-lg my-12 md:my-24">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">About Me</h2>
+                    <p class="text-lg text-center leading-relaxed text-gray-600 dark:text-gray-400">
+                        I am a student at the <span class="font-medium">University of Technology</span>, where I'm pursuing a degree in Computer Science. My primary focus is on building scalable and efficient web applications. I'm passionate about clean code, robust architecture, and creating intuitive user experiences. When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects, or diving into the latest tech blogs.
+                    </p>
+                </div>
+            </section>
 
+            <!-- Projects Section -->
+            <section id="projects" class="py-16 md:py-24">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="frosted-glass rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/93C5FD/1E40AF?text=Project+1" alt="Project 1: E-Commerce Store" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-Commerce Web App</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">A full-stack e-commerce platform with user authentication, a shopping cart, and a product management system. Built using React, Node.js, and MongoDB.</p>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 font-medium">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="frosted-glass rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/A5B4FC/3730A3?text=Project+2" alt="Project 2: Data Visualization Dashboard" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Data Visualization Dashboard</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">An interactive dashboard to visualize and analyze large datasets. Features real-time charts and filters for a dynamic user experience. Developed with Python, Flask, and D3.js.</p>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 font-medium">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="frosted-glass rounded-xl shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/BFDBFE/1E3A8A?text=Project+3" alt="Project 3: Mobile Game" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Retro Arcade Game</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">A classic-style arcade game built from scratch using pure JavaScript and the HTML Canvas API. Features include score tracking, power-ups, and multiple difficulty levels.</p>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 font-medium">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Matrix Calculator -->
-    <div class="project-card">
-      <h3>Matrix Calculator (Python & Matplotlib)</h3>
-      <p>Built an interactive command-line tool using NumPy and Matplotlib to understand linear regression concepts visually.</p>
-      <a href="https://github.com/Banuka2540/Matrix_Calculator" target="_blank" class="btn">GitHub</a>
+            <!-- Contact Section -->
+            <section id="contact" class="py-16 md:py-24 frosted-glass rounded-2xl shadow-lg my-12 md:my-24">
+                <div class="max-w-2xl mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                        I'm currently seeking a full-time position as a Junior Software Engineer. If you are interested in my work or would like to collaborate, please feel free to reach out. I'd love to connect with you!
+                    </p>
+                    <a href="mailto:jane.doe@example.com" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-transform transform hover:scale-105">
+                        Send Me an Email
+                    </a>
+                    <div class="mt-8 flex justify-center space-x-6">
+                        <a href="https://linkedin.com/in/janedoe" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition-transform transform hover:scale-110">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.75 1.75-1.75 1.75.79 1.75 1.766-.783 1.767-1.75 1.767zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.764 7 2.355v6.88z"/></svg>
+                        </a>
+                        <a href="https://github.com/janedoe" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition-transform transform hover:scale-110">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.02c-3.32.72-4.015-1.61-4.015-1.61-.54-.6-1.31-.76-1.31-.76-1.07-.74.08-.73.08-.73 1.18.08 1.8 1.21 1.8 1.21 1.05 1.79 2.76 1.27 3.44.97.11-.75.41-1.27.75-1.57-2.6-.29-5.32-1.3-5.32-5.78 0-1.28.46-2.33 1.21-3.15-.12-.3-.52-1.49.12-3.11 0 0 .99-.32 3.25 1.2.94-.26 1.94-.39 2.94-.39 1.002 0 2.002.13 2.94.39 2.26-1.52 3.25-1.2 3.25-1.2.64 1.62.24 2.81.12 3.11.75.82 1.21 1.87 1.21 3.15 0 4.49-2.72 5.48-5.33 5.77.42.36.81 1.09.81 2.2v3.25c0 .32.22.69.82.57C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="text-center py-6 mt-12 text-sm text-gray-500 dark:text-gray-400">
+                &copy; 2024 Jane Doe. All Rights Reserved.
+            </footer>
+        </main>
     </div>
 
-    <!-- Task Manager -->
-    <div class="project-card">
-      <h3>CRUD Task Manager (Django)</h3>
-      <p>Developed a Django-based web application to create, read, update, and delete tasks for learning Django CRUD operations.</p>
-      <a href="https://github.com/Banuka2540/tasksmanager" target="_blank" class="btn">GitHub</a>
-    </div>
+    <script>
+        // --- Dark/Light Mode Toggle ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const root = document.documentElement;
 
-      <div class="project-card">
-  <h3>Portfolio Website (Django, HTML, CSS & JS)</h3>
-  <p>I created this portfolio website using Django, HTML, CSS, and JavaScript to showcase my projects, skills, and experience.</p>
-  <a href="https://github.com/Banuka2540/Django-portfolio" target="_blank" class="btn">GitHub</a>
-</div>
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
 
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
 
+        themeToggleBtn.addEventListener('click', () => {
+            if (root.classList.contains('dark')) {
+                root.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                root.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
 
-  </div>
-</section>
+        // --- Typing Effect for Hero Text ---
+        const typedTextSpan = document.getElementById('typed-text');
+        const textArray = ["A passionate Software Engineer specializing in Full-Stack Web Development."];
+        const typingDelay = 50;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
 
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                // Wait before moving to the next line or re-looping
+                setTimeout(() => {
+                    // This is where you would put logic to reset for the next phrase
+                }, newTextDelay);
+            }
+        }
 
-
-  <!-- Skills Section -->
-  <section id="skills">
-  <h2>My Skills</h2>
-
-  <div class="skills-container">
-    <!-- Left Column: Programming Languages -->
-    <div class="skills-column">
-      <h3>Programming Languages</h3>
-
-      <div class="skill">
-        <p>HTML</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>CSS</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>Python</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 80%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>Java</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 75%;"></div>
-        </div>
-      </div>
-    </div>
-
-      <div class="skill">
-        <p>C</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 50%;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Column: Libraries & Frameworks -->
-    <div class="skills-column">
-      <h3>Libraries & Frameworks</h3>
-
-      <div class="skill">
-        <p>Django</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 40%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>Matplotlib</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 40%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>Pandas</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 45%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>NumPy</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 60%;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="{% static 'js/main.js' %}"></script>
-
-  <!-- Blogs Section -->
-  <section id="Blog" class="blogs">
-    <h2>Blogs</h2>
-    <p>sds</p>
-  </section>
-<script src="{% static 'js/main.js' %}"></script>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: banukadeseram12@gmail.com</p>
-
-  </section>
-
-
+        // Start the typing animation on window load
+        window.onload = function() {
+            if(textArray.length) {
+                type();
+            }
+        };
+    </script>
 </body>
 </html>

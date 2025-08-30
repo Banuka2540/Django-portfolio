@@ -3,5 +3,10 @@
         "comments": "on",
         "strings": "on"
     },
-    "editor.suggest.snippetsPreventQuickSuggestions": true
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
