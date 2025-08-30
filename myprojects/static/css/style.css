@@ -7,15 +7,11 @@
 
 body {
   background: #f4f4f4;
-  color: #333;
+  color: #1e1e1e;
   line-height: 1.6;
 }
 
-header {
-  background:rebeccapurple;
-  color: #fff;
-  padding: 10px 20px;
-}
+
 
 nav {
   display: flex;
@@ -35,7 +31,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #6837ff;
   font-weight: bold;
 }
 
@@ -43,20 +39,22 @@ nav {
   text-align: center;
   padding: 250px 20px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
+
 }
+span#span {
+  color: #e0e0e0 !important;
+  font-size: 200%;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 
 .hero1{
   text-align: center;
   padding:20px 30px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
 }
 
-.hero h2 span {
-  color: #4da3e8;
-    font-size: 200%;
-}
 
 .hero button {
   padding: 10px 20px;
