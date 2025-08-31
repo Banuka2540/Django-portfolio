@@ -15,14 +15,17 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: url('https://placehold.co/1920x1080/4F46E5/FFFFFF?text=Abstract+Background') no-repeat center center fixed;
+            background: #303030;
             background-size: cover;
+             background-size: cover; /* Optional: Makes image cover the entire area */
+        background-position: center; /
             @apply text-gray-800 transition-colors duration-300;
         }
         .dark body {
-            background: url('https://placehold.co/1920x1080/111827/FFFFFF?text=Abstract+Background') no-repeat center center fixed;
+            background: #d8d8d8;
             background-size: cover;
             @apply text-gray-200;
+
         }
 
         /* Frosted Glass Effect for content sections and nav bar */
@@ -60,7 +63,7 @@
         <!-- Navigation Bar -->
         <nav class="sticky top-0 z-50 frosted-glass p-4 shadow-sm">
             <div class="container mx-auto flex justify-between items-center">
-                <a href="#hero" class="text-xl font-bold text-gray-800 dark:text-white">Jane Doe</a>
+                <a href="#hero" class="text-xl font-bold text-gray-800 dark:text-white">Welcome</a>
                 <div class="space-x-4 flex items-center">
                     <a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-300">About</a>
                     <a href="#projects" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-300">Projects</a>
@@ -85,7 +88,7 @@
             <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-8 md:space-y-0 md:space-x-12">
                 <div class="md:w-1/2 lg:w-2/3">
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 dark:text-white mb-4 hero-title-shadow">
-                        Hello, I'm <span class="text-indigo-600 dark:text-indigo-400">Jane Doe</span>.
+                        Hello, I'm <span class="text-indigo-600 dark:text-indigo-400">Yuthila Banuka</span>.
                     </h1>
                     <p id="typed-text" class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-6 typing-text">
 
@@ -94,9 +97,7 @@
                         View My Work
                     </a>
                 </div>
-                <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-indigo-400 shadow-xl">
-                    <img src="https://placehold.co/500x500/818CF8/E0E7FF?text=Jane+Doe" alt="Jane Doe Profile Picture" class="object-cover w-full h-full">
-                </div>
+
             </section>
 
             <!-- About Section -->
