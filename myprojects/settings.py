@@ -52,11 +52,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "myprojects.urls"
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates'],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],  # <- this points to /home/yuthila/Portfolio/templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -67,7 +66,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = "myprojects.wsgi.application"
 
 
