@@ -20,10 +20,7 @@
 
         /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 1000;
+
             padding: 25px 50px;
             backdrop-filter: blur(20px);
             background: rgba(26, 26, 46, 0.9);
