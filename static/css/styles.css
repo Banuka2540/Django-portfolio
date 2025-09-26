@@ -29,7 +29,7 @@
             left: 0;
             width:150%;
             z-index: 1000;
-            padding: 40px 0px;
+            padding: 20px 0px;
             backdrop-filter: blur(20px);
             color:#000000;
             background: rgba(255, 255, 255, 0.9);
@@ -77,7 +77,7 @@
         /* Sections */
         section {
             
-            padding: 9% 0;
+            padding: 10% 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,7 +91,7 @@
             display: flex;
             align-items: center;  
             justify-content: center; 
-            gap: 10%;           
+            gap: 15%;           
             flex-wrap: wrap; 
         }
 
@@ -104,9 +104,9 @@
             
         }
         .intro-text {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-family: 'Poppins';
-            font-weight: 400;
+            font-weight:500;
             color: #000000;
             background-clip: text;
             animation: fadeInUp 1.2s ease-out;
@@ -116,9 +116,18 @@
             font-size: 1.5rem;
             color: #272727;
             font-weight: 400;
-            margin-bottom: 0;
+            margin-bottom: 10px;
             opacity: 0;
             animation: fadeInUp 1.2s ease-out 0.3s forwards;
+        }
+
+        .arrow{
+            width: 150px;
+            height: 40px;
+            
+            
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 0.6s forwards;
         }
 
         /* Section Styling */
@@ -151,6 +160,30 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
+
+
+        /* CSS */
+.projects-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 200;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+animation: fadeInUp 1.2s ease-out 0.3s forwards;
+}
+
+/* Hover animation */
+.projects-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background-color: #000000; /* Slightly lighter black for effect */
+}
 
         /* Projects Section */
         #projects {
