@@ -1,68 +1,3 @@
-  {% comment %} <!-- Projects Section -->
-
-
-    <section id="projects">
-        <div class="section-container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Django portfolio</h3>
-                    <p>A Django-based portfolio website showcasing my projects and skills. Built with HTML, CSS, and JavaScript for a responsive and interactive design.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Matrix Calculator</h3>
-                    <p>A modular, interactive NumPy-based command-line application for creating, manipulating, and visualizing arrays in 1D, 2D, 3D, and 4D. Built with Python, NumPy, and Matplotlib, this project is a great way to explore array operations, filtering, and data visualization</p>
-                </div>
-                <div class="project-card">
-                    <h3>Task Manager</h3>
-                    <p>This is a CRUD (Create, Read, Update, Delete) style project built using the Django framework. The app supports user authentication, and each user gets their own personal task list.</p>
-                </div>
-            </div>
-        </div>
-    </section> {% endcomment %}
-
- 
-
-
-
-    {% comment %} <!-- Blogs Section -->
-    <section id="blogs">
-        <div class="section-container">
-            <h2 class="section-title">Blogs</h2>
-            <div class="blog-content">
-                <p>Welcome to my digital space where I share insights, tutorials, and thoughts about technology, development best practices, and industry trends.</p>
-                <p>From deep technical dives into frameworks and tools to discussions about the future of software development, you'll find content that aims to inspire and inform the developer community.</p>
-                <p>Stay tuned for regular updates covering everything from code optimization techniques to emerging technologies that are shaping our digital landscape.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-container">
-            <h2 class="section-title">Contact</h2>
-            <div class="blog-content">
-                <p style="margin-bottom: 50px;">Let's collaborate and create something amazing together. Whether you have a project idea, want to discuss opportunities, or just want to connect, I'd love to hear from you.</p>
-            </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </section> {% endcomment %}
-
-
 
 {% load static %}
 <!DOCTYPE html>
@@ -83,7 +18,7 @@
     <ul class="nav-links">
         <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
         <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
-        <li><a href="{% url 'blogs' %}" class="nav-link">Blogs</a></li>
+        
         <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
     </ul>
 </nav>
@@ -93,16 +28,21 @@
        <!-- About Section -->
     <section id="about">
         <div class="section-container">
-            <h2 class="section-title">About</h2>
+        
             <div class="about-content">
-                <h2>BSC(Hons) Information Sytems.</h2>
-                <p>I am an undergraduate at the University of Sabaragamuwa, pursuing a Bachelor of Science (Honours) in Information Systems. I completed my Advanced Level examinations in the Mathematics stream, earning three C grades.</p>
-                
-                <h2>Worked at Srilankan Airlines.</h2>
-                <p>I gained professional experience working at SriLankan Airlines for seven months, where I operated in a fast-paced, customer-focused environment. </p>
-                
-                <h2>Completed AL / OL in Kingswood College,Kandy.</h2>
-                <p>I completed my Ordinary Level and Advanced Level education at Kingswood College, Kandy. My time there allowed me to build a solid academic foundation while cultivating discipline, critical thinking, and a lifelong passion for learning that continues to guide my higher education and career goals.</p>
+                <ul>
+                    <li><h2>BSC(Hons) Information Sytems.</h2></li>
+                    <p><i>I am an undergraduate at the University of Sabaragamuwa, pursuing a Bachelor of Science (Honours) in Information Systems. I completed my Advanced Level examinations in the Mathematics stream, earning three C grades.</i></p>
+                </ul><br>
+                <ul>
+                    <li><h2>Worked at Srilankan Airlines.</h2></li>
+                    <p><i>I gained professional experience working at SriLankan Airlines for seven months, where I operated in a fast-paced, customer-focused environment.</i> </p>
+                </ul><br>
+
+                <ul>
+                    <li><h2>Completed AL / OL in Kingswood College,Kandy.</h2></li>
+                    <p><i>I completed my Ordinary Level and Advanced Level education at Kingswood College, Kandy. My time there allowed me to build a solid academic foundation while cultivating discipline, critical thinking, and a lifelong passion for learning that continues to guide my higher education and career goals.</i></p>
+                </ul>
             </div>
         </div>
     </section>
