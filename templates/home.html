@@ -14,10 +14,10 @@
 <!-- this is the nav bar  -->
 <nav>
     <ul class="nav-links">
-        <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-        <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
-        <li><a href="{% url 'projects' %}" class="nav-link">projects</a></li>
-        <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 </nav>
 
@@ -30,11 +30,57 @@
     <div>
         <h1 class="intro-text">Hey, I'm Yuthila Banuka</h1>
         <p class="intro-subtitle">AI & ML Enthusiast  |  AI Automation </p>
-        <button class="projects-btn"><a href ='projects/'>Projects</button>
+        <button class="projects-btn"><a href ='projects/'>Projects</a></button>
     </div>
 </section>
 
 
+<section id = "about">
+    <h1 class="about-heading">About me</h1>
+    <h2 class="headings">heading1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet quas sit, odit sunt accusantium quis praesentium sequi eaque labore quidem excepturi possimus voluptatibus at vel perferendis vitae necessitatibus ipsa?</p>
+    <h2 class="headings">heading1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet quas sit, odit sunt accusantium quis praesentium sequi eaque labore quidem excepturi possimus voluptatibus at vel perferendis vitae necessitatibus ipsa?</p>
+    <h2 class="headings">heading1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet quas sit, odit sunt accusantium quis praesentium sequi eaque labore quidem excepturi possimus voluptatibus at vel perferendis vitae necessitatibus ipsa?</p>
+</section>
+
+<section id="projects">
+
+<div class="section-container">
+<div class="about-content">
+    <h1 class="about-heading">Certifications</h1>
+    
+    <div class="cert-grid">
+        <div class="cert-card">
+            <h3>Neo4j Fundamentals</h3>
+            <p><a href = 'https://graphacademy.neo4j.com/c/5c34f933-9789-4aaa-88ef-9861a1c991e0/'>View</p>
+        </div>
+        <div class="cert-card">
+            <h3>Python For Beginners Course In-Depth</h3>
+            <p><a href = 'https://drive.google.com/file/d/159IJ1a0uGYpovCagQti5nT5ZEZzYENBT/view?usp=sharing'>View</p>
+        </div>
+        <div class="cert-card">
+            <h3>AI for Business Professionals</h3>
+            <p><a href = 'https://www.life-global.org/certificate/923ec59e-7001-49e6-a80e-eba7d3a7263e'>View</p>
+        </div>
+        <div class="cert-card">
+            <h3>PMaster adobe illustrator</h3>
+            <p><a href = 'https://www.linkedin.com/in/yuthilabanuka/details/certifications/1721490663990/single-media-viewer?type=DOCUMENT&profileId=ACoAADcZok8BEsDM-kHY1XEm-rnhxXgIS03V6qA&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bad32sxNsT4yhoVsfhyo%2BcQ%3D%3D'>View</p>
+        </div>
+        <div class="cert-card">
+            <h3>Responsive Web Design</h3>
+            <p><a href = 'https://freecodecamp.org/certification/fcc90f6ca47-7c78-4f32-bbd3-27a8f58b8c31/responsive-web-design'>View</p>
+        </div>
+        <div class="cert-card">
+            <h3> Srilankan Computer Competency Licence</h3>
+            <p><a href = 'https://www.linkedin.com/in/yuthilabanuka/details/certifications/1721491008627/single-media-viewer?type=DOCUMENT&profileId=ACoAADcZok8BEsDM-kHY1XEm-rnhxXgIS03V6qA&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bx68mtNRXRdGxZLyrOAhdtg%3D%3D'>View</p>
+        </div>
+        
+    </div>
+</div>
+</div>
+</section>
 
 <script src="{% static 'js/main.js' %}"></script>
 </body>
