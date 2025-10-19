@@ -16,8 +16,6 @@ This is a full-stack web application I built to showcase my skills, projects, an
 - Python  
 - Django Framework 
 
----
-
 ## ✨ Features
 
 - 🏠 **Home Page** – Clean landing page introducing myself  
